@@ -14,6 +14,7 @@ import { ToastyComponent } from './src/toasty.component';
 import { ToastComponent } from './src/toast.component';
 import { SafeHtmlPipe } from './src/shared';
 import { ToastyService, ToastyConfig, toastyServiceFactory } from './src/toasty.service';
+import { MaybeAsyncPipe } from './src/maybe-async.pipe';
 
 export let providers = [
     ToastyConfig,
@@ -22,8 +23,8 @@ export let providers = [
 
 @NgModule({
     imports: [CommonModule],
-    declarations: [ToastComponent, ToastyComponent, SafeHtmlPipe],
-    exports: [ ToastComponent, ToastyComponent],
+    declarations: [ToastComponent, ToastyComponent, SafeHtmlPipe, MaybeAsyncPipe],
+    exports: [ ToastComponent, ToastyComponent, MaybeAsyncPipe],
     providers: providers
 })
 export class ToastyModule {

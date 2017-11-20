@@ -5,6 +5,7 @@ import {ToastyService, ToastData, ToastyConfig} from '../src/toasty.service';
 import {ToastyComponent} from '../src/toasty.component';
 import {ToastComponent} from '../src/toast.component';
 import {SafeHtmlPipe} from '../src/shared';
+import { MaybeAsyncPipe } from '../src/maybe-async.pipe';
 
 describe('ToastyComponent', () => {
 
@@ -38,7 +39,7 @@ describe('ToastyComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [ToastComponent, ToastyComponent, SafeHtmlPipe],
+            declarations: [ToastComponent, ToastyComponent, SafeHtmlPipe, MaybeAsyncPipe],
             providers: [ToastyService, ToastyConfig]
         });
         TestBed.compileComponents();
